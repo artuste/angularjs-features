@@ -111,5 +111,5 @@ module.exports = function (grunt) {
     grunt.registerTask('hints', ['jshint', 'htmlhint']);
     grunt.registerTask('less-css', ['less', 'cssmin']);
 
-    grunt.registerTask('default', ['less-css']);
+    grunt.registerTask('default', ['less-css', 'wiredep']);
 };

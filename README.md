@@ -8,5 +8,5 @@
 <h2>Install bower</h2>
 <pre>bower install</pre>
 
-<h2>Grunt wiredep plugin</h2>
-<pre>grunt wiredep</pre>
+<h2>Run default Grunt task</h2>
+<pre>grunt</pre>
