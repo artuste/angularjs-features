@@ -6,6 +6,7 @@
 <pre>npm install</pre>
 
 <h2>Install bower</h2>
+<p>Because Bower is using Git repository, run it in Git bash command-line.</p>
 <pre>bower install</pre>
 
 <h2>Run default Grunt task</h2>
