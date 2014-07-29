@@ -16,6 +16,20 @@ module.exports = function (grunt) {
                 browsers: ['PhantomJS'] //'Chrome', 'Firefox'
             }
         },
+        wiredep: {
+            target: {
+                src: [
+                    'index.html'
+                ],
+                cwd: '',
+                dependencies: true,
+                devDependencies: true,
+                exclude: [],
+                fileTypes: {},
+                ignorePath: '',
+                overrides: {}
+            }
+        },
         htmlhint: {
             angular_files: {
                 options: {
@@ -87,6 +101,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-wiredep');
 
     //    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -96,5 +111,5 @@ module.exports = function (grunt) {
     grunt.registerTask('hints', ['jshint', 'htmlhint']);
     grunt.registerTask('less-css', ['less', 'cssmin']);
 
-    grunt.registerTask('default', ['less-css']);
+    grunt.registerTask('default', ['less-css', 'wiredep']);
 };

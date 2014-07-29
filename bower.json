@@ -45,7 +45,6 @@
     "angular-route": "~1.2.19",
     "angular-resource": "~1.2.19",
     "angular-translate": "~2.2.0",
-    "headjs": "~1.0.3",
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2"
   }
