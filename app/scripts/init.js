@@ -6,10 +6,7 @@ if (head.browser.ie && head.browser.version < 9) {
     );
 }
 
-
-// TODO: Loading CSS files
-
-head.js(
+head.load(
     // jQuery libraries
     { jquery: 'bower_components/jquery/dist/jquery.js' },
     { jqueryUi: 'bower_components/jquery-ui/jquery-ui.js' },
