@@ -17,7 +17,8 @@
         /*
          * 3rd Party modules
          */
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'angularMoment'
 
     ]);
 })();
