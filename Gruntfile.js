@@ -49,7 +49,7 @@ module.exports = function (grunt) {
                     jQuery: true
                 }
             },
-            uses_defaults: ['app/metronic/init.js']
+            uses_defaults: ['app/scripts/init.js']
         },
         less: {
             development: {

@@ -51,7 +51,7 @@ $(function () {
 //    .ready('angular', function () {
 //        $script([
 //            'app/modules/admin/app.js',
-//            'app/modules/admin/home/controllers/controllers.home.js'
+//            'app/modules/admin/home/controllers/home.js'
 //        ], function () {
 //            Metronic.init();
 //            Layout.init();
