@@ -14,7 +14,8 @@
                 <input name="birthdate" ng-model="vm.birthdate" class="form-control" id="forBirthDate" type="date" placeholder="Your birthdate">
             </div>
         </div>
-        <button ng-disabled="!vm.birthdate" class="btn btn-default" ng-click="vm.getAge()">Check</button>
-        <button ng-disabled="!vm.birthdate" ng-click="vm.reset()" class="btn btn-default">Reset</button>
+
+        <button ng-disabled="!vm.birthdate || vm.hideActionButtons" class="btn btn-default" ng-click="vm.getAge()">Check</button>
+        <button ng-disabled="!vm.birthdate || vm.hideActionButtons" ng-click="vm.reset()" class="btn btn-default">Reset</button>
     </form>
 </div>

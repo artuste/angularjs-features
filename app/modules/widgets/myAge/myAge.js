@@ -34,16 +34,32 @@
         active();
 
         function active() {
-
+            actionButtons();
+            checkDate();
         }
 
-        vm.getAge = function () {
-            vm.age = new moment().diff(vm.birthdate, 'years');
+        function checkDate() {
+            vm.hideActionButtons = false;
+
+            $scope.$watch('vm.birthdate', function(current, original) {
+                if(current !== original) {
+                    var age = new moment().diff(vm.birthdate, 'years');
+
+                    age <= 0 ? vm.hideActionButtons = true : vm.hideActionButtons = false;
+
+                }
+            });
         };
 
-        vm.reset = function () {
-            vm.birthdate = null;
-            vm.age = null;
+        function actionButtons() {
+            vm.getAge = function () {
+                vm.age = new moment().diff(vm.birthdate, 'years');
+            };
+
+            vm.reset = function () {
+                vm.birthdate = null;
+                vm.age = null;
+            };
         };
     }
 
@@ -57,5 +73,6 @@
             }
         };
     }
+
 
 })();
