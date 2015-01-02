@@ -90,7 +90,16 @@ module.exports = function (grunt) {
                 files: ['app/tests/testSpec.js'],
                 tasks: 'karma'
             }
-        }
+        },
+		connect: {
+            dist: {
+                options: {
+                    port: 1338,
+                    hostname: 'localhost',
+                    keepalive: true
+                }
+            }
+        },
     });
 
     // Npm tasks
@@ -98,6 +107,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+	
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-karma');
@@ -111,5 +122,5 @@ module.exports = function (grunt) {
     grunt.registerTask('hints', ['jshint', 'htmlhint']);
     grunt.registerTask('less-css', ['less', 'cssmin']);
 
-    grunt.registerTask('default', ['less-css', 'wiredep']);
+    grunt.registerTask('default', ['connect']);
 };

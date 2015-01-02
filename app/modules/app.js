@@ -3,5 +3,6 @@
 angular.module('app', [
     'app.core',
     'app.home',
-    'app.widgets'
+    'app.widgets',
+    'app.promises'
 ]);

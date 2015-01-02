@@ -14,6 +14,11 @@ angular.module('app')
                 controller: 'Widgets',
                 controllerAs: 'vm'
             })
+            .when('/promises', {
+                templateUrl: appPath + '/promises/promises.tpl.html',
+                controller: 'Promises',
+                controllerAs: 'vm'
+            })
             .otherwise({
                 redirectTo: '/home'
             });
