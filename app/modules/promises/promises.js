@@ -12,49 +12,42 @@
         /*jshint validthis: true */
         var vm = this;
 
-        vm.timeoutPromiseData = "Wait ...";
+        vm.timeoutDataData = "Wait ...";
 
-        DataService.timeoutPromise()
+        DataService.getTimeoutData()
             .then(function (response) {
-               vm.timeoutPromiseData = response;
+               vm.timeoutDataData = response;
             });
 
-        DataService.getData()
+        DataService.getHttpData()
             .then(function (response) {
-                vm.data = response;
+                vm.httpData = response;
             });
+
+        DataService.getCallbackData(function(response) {
+            vm.callbackData = response;
+        });
 
     }
 
     function DataService($http, $q, $timeout) {
         return {
-            timeoutPromise: timeoutPromise,
-            getData: getData
+            getTimeoutData: getTimeoutData,
+            getHttpData: getHttpData,
+            getCallbackData: getCallbackData
         };
+
+        function _data() {
+            return {
+                name: "Albert",
+                age: 21
+            };
+        }
 
 
         ////////////////
 
-        function timeoutPromise() {
-            var deferred = $q.defer();
-
-            //deferred.promise.then(function () {
-            //    return 'Promise - resolved!';
-            //});
-
-            $timeout(function () {
-                var data = {
-                    name: "Albert",
-                    age: 21
-                };
-
-                deferred.resolve(data);
-            }, 3000);
-
-            return deferred.promise;
-        }
-
-        function getData() {
+        function getHttpData() {
             return $http.get('app/modules/promises/data.json')
                 .then(function (response) {
                     if (typeof response.data === 'object') {
@@ -68,6 +61,22 @@
                     // something went wrong
                     return $q.reject(response.data);
                 });
+        }
+
+        function getTimeoutData() {
+            var deferred = $q.defer();
+
+            $timeout(function () {
+                deferred.resolve(_data());
+            }, 3000);
+
+            return deferred.promise;
+        }
+
+        function getCallbackData(callback) {
+            $timeout(function() {
+                callback(_data());
+            }, 2000);
         }
     }
 })();
