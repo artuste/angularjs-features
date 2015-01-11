@@ -46,7 +46,6 @@
                     var age = new moment().diff(vm.birthdate, 'years');
 
                     age <= 0 ? vm.hideActionButtons = true : vm.hideActionButtons = false;
-
                 }
             });
         };

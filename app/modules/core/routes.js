@@ -19,6 +19,11 @@ angular.module('app')
                 controller: 'Promises',
                 controllerAs: 'vm'
             })
+            .when('/patterns', {
+                templateUrl: appPath + '/patterns/patterns.tpl.html',
+                controller: 'Patterns',
+                controllerAs: 'vm'
+            })
             .otherwise({
                 redirectTo: '/home'
             });
