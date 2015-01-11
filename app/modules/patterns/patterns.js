@@ -13,18 +13,18 @@
         var vm = this;
 
         // Constructor Invocation Pattern
-        var constructorInvocation = Svc.constructorInvocation(100, 'MA');
+        var _constructorInvocation = Svc.constructorInvocation(),
+            constructorInvocation = new _constructorInvocation(100, 'Invocation!')
 
         vm.constructorInvocation = constructorInvocation.getProperties();
 
 
         // Observer Pattern
-        var _observer = Svc.observer();
-
-        var observer = new _observer;
+        var _observer = Svc.observer(),
+            observer = new _observer;
 
         observer.add({
-           id: 200,
+            id: 200,
             text: "I'm observer"
         });
 
@@ -34,7 +34,6 @@
         });
 
         vm.observer = observer.get();
-
 
     }
 
@@ -51,14 +50,14 @@
                 this.name = name;
             };
 
-            Apple.prototype.getProperties = function() {
+            Apple.prototype.getProperties = function () {
                 return {
                     id: this.id,
                     name: this.name
                 }
             };
 
-            return new Apple(id, name);
+            return Apple;
         }
 
         function observer() {
