@@ -5,14 +5,22 @@
     </h3>
 
     <h4>Constructor Invocation</h4>
-
     <div class="alert alert-info">
         <ul>
             <li><b>ID:</b> {{ vm.constructorInvocation.id }}</li>
             <li><b>NAME:</b> {{ vm.constructorInvocation.name }}</li>
         </ul>
     </div>
+    <hr />
 
-
+    <h4>Observer</h4>
+    <div class="alert alert-info">
+        <ul>
+            <li ng-repeat="item in vm.observer">
+                <b>{{ item.id}}</b>
+                <p>{{ item.text }}</p>
+            </li>
+        </ul>
+    </div>
 
 </div>
