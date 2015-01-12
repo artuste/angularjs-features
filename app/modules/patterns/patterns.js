@@ -35,14 +35,22 @@
 
         vm.observer = observer.get();
 
+
+        // Module pattern
+
+        var module = Svc.module();
+        module.variableKey = 'New variable key';
+
+        vm.module = module.getKeyName();
+
     }
 
     function Svc() {
         return {
             constructorInvocation: constructorInvocation,
-            observer: observer
+            observer: observer,
+            module: module
         };
-
 
         function constructorInvocation(id, name) {
             var Apple = function (id, name) {
@@ -59,7 +67,6 @@
 
             return Apple;
         }
-
         function observer() {
             function ObserverList() {
                 this.observerList = [];
@@ -75,6 +82,15 @@
 
             return ObserverList;
         }
+        function module(variableValue) {
+            var myObjectLiteral = {
+                variableKey: variableValue,
+                getKeyName: function () {
+                    return this.variableKey;
+                }
+            };
 
+            return myObjectLiteral;
+        }
     }
 })();
