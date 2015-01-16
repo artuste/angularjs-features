@@ -87,7 +87,7 @@ module.exports = function (grunt) {
                 tasks: 'jasmine'
             },
             karma: {
-                files: ['app/tests/testSpec.js'],
+                files: ['tests/*/*.js'],
                 tasks: 'karma'
             }
         },
@@ -99,7 +99,7 @@ module.exports = function (grunt) {
                     keepalive: true
                 }
             }
-        },
+        }
     });
 
     // Npm tasks
