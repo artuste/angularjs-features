@@ -66,26 +66,22 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            less: {
-                files: ['app/css/*.less'],
-                tasks: ['less']
-            },
-            cssmin: {
-                files: ['app/css/*.css'],
-                tasks: ['cssmin']
-            },
-            scripts: {
-                files: ['app/metronic/*.js'],
-                tasks: ['jshint']
-            },
-            html: {
-                files: ['app/modules/*/*/tpl/*.html', 'app/modules/*/*/*/tpl/*.html'],
-                tasks: ['htmlhint']
-            },
-            jasmine: {
-                files: ['app/tests/jasmineSpec.js'],
-                tasks: 'jasmine'
-            },
+            //less: {
+            //    files: ['app/css/*.less'],
+            //    tasks: ['less']
+            //},
+            //cssmin: {
+            //    files: ['app/css/*.css'],
+            //    tasks: ['cssmin']
+            //},
+            //scripts: {
+            //    files: ['app/metronic/*.js'],
+            //    tasks: ['jshint']
+            //},
+            //html: {
+            //    files: ['app/modules/*/*/tpl/*.html', 'app/modules/*/*/*/tpl/*.html'],
+            //    tasks: ['htmlhint']
+            //},
             karma: {
                 files: ['tests/*/*.js'],
                 tasks: 'karma'
