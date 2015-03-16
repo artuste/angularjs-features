@@ -1,32 +1,40 @@
-'use strict';
+(function () {
+    'use strict';
 
-var appPath = 'app/modules';
+    angular.module('app')
+        .config(['$stateProvider', '$urlRouterProvider', config]);
 
-angular.module('app')
-    .config(function ($routeProvider) {
-        $routeProvider
-            .when('/home', {
+    var appPath = 'app/modules';
+
+    function config($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/home");
+
+        $stateProvider
+            .state('home', {
+                url: '/home',
                 templateUrl: appPath + '/home/home.tpl.html',
                 controller: 'Home',
                 controllerAs: 'vm'
             })
-            .when('/widgets', {
+            .state('widgets', {
+                url: '/widgets',
                 templateUrl: appPath + '/widgets/widgets.tpl.html',
                 controller: 'Widgets',
                 controllerAs: 'vm'
             })
-            .when('/promises', {
+            .state('promises', {
+                url: '/promises',
                 templateUrl: appPath + '/promises/promises.tpl.html',
                 controller: 'Promises',
                 controllerAs: 'vm'
             })
-            .when('/patterns', {
+            .state('patterns', {
+                url: '/patterns',
                 templateUrl: appPath + '/patterns/patterns.tpl.html',
                 controller: 'Patterns',
                 controllerAs: 'vm'
-            })
-            .otherwise({
-                redirectTo: '/home',
-                controllerAs: 'vm'
             });
-    });
+
+    }
+
+})();

@@ -1,8 +1,8 @@
 <div id="sidebar">
     <ul class="sidebar-menu" ng-controller="MenuCtrl as vm">
-        <li><a href="#/home" ng-class="vm.getPath('/home')"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
-        <li><a href="#/widgets" ng-class="vm.getPath('/widgets')"><span class="glyphicon glyphicon-dashboard"></span>  Widgets</a></li>
-        <li><a href="#/promises" ng-class="vm.getPath('/promises')"><span class="glyphicon glyphicon-asterisk"></span>  Promises</a></li>
-        <li><a href="#/patterns" ng-class="vm.getPath('/patterns')"><span class="glyphicon glyphicon-barcode"></span>  Patterns</a></li>
+        <li><a ui-sref="home" ng-class="vm.getPath('/home')"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+        <li><a ui-sref="widgets" ng-class="vm.getPath('/widgets')"><span class="glyphicon glyphicon-dashboard"></span>  Widgets</a></li>
+        <li><a ui-sref="promises" ng-class="vm.getPath('/promises')"><span class="glyphicon glyphicon-asterisk"></span>  Promises</a></li>
+        <li><a ui-sref="patterns" ng-class="vm.getPath('/patterns')"><span class="glyphicon glyphicon-barcode"></span>  Patterns</a></li>
     </ul>
 </div>

@@ -43,7 +43,7 @@
 
         <div id="center">
             <div class="container">
-                <section ng-view></section>
+                <section ui-view></section>
             </div>
         </div>
     </div>
@@ -69,6 +69,7 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/angular-moment/angular-moment.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
     <!-- endbower -->
 
     <!-- i18n -->
@@ -99,9 +100,9 @@
 
     <!-- blocks -->
     <script src="app/modules/app.js"></script>
+    <script src="app/modules/core/routes.js"></script>
     <script src="app/modules/core/core.module.js"></script>
     <script src="app/modules/core/common.js"></script>
-    <script src="app/modules/core/routes.js"></script>
 
     <!-- ADMIN -->
 
