@@ -14,7 +14,7 @@
 
         // Constructor Invocation Pattern
         var _constructorInvocation = Svc.constructorInvocation(),
-            constructorInvocation = new _constructorInvocation(100, 'Invocation!')
+            constructorInvocation = new _constructorInvocation(100, 'Invocation!');
 
         vm.constructorInvocation = constructorInvocation.getProperties();
 

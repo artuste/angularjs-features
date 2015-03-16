@@ -45,11 +45,16 @@ module.exports = function (grunt) {
                 eqeqeq: true,
                 eqnull: true,
                 browser: true,
+                predef: [
+                    'angular',
+                    '$',
+                    '_'
+                ],
                 globals: {
                     jQuery: true
                 }
             },
-            uses_defaults: ['app/scripts/init.js']
+            uses_defaults: ['app/modules/**/*.js']
         },
         less: {
             development: {

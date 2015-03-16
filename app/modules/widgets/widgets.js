@@ -5,9 +5,7 @@
         .module('app.widgets')
         .controller('Widgets', Widgets);
 
-    Widgets.$inject = ['common'];
-
-    function Widgets(common) {
+    function Widgets() {
         /*jshint validthis: true */
         var vm = this;
 
