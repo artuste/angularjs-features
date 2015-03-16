@@ -7,7 +7,8 @@ angular.module('app')
         $routeProvider
             .when('/home', {
                 templateUrl: appPath + '/home/home.tpl.html',
-                controller: 'Home'
+                controller: 'Home',
+                controllerAs: 'vm'
             })
             .when('/widgets', {
                 templateUrl: appPath + '/widgets/widgets.tpl.html',
@@ -25,6 +26,7 @@ angular.module('app')
                 controllerAs: 'vm'
             })
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/home',
+                controllerAs: 'vm'
             });
     });

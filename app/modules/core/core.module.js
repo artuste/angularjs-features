@@ -6,6 +6,7 @@
          * Angular modules
          */
         'ngRoute',
+        'ngAnimate',
         'ngResource',
         'pascalprecht.translate',
 

@@ -1,16 +1,30 @@
-'use strict';
+(function () {
+    "use strict";
 
-angular.module('app.home', [])
+    angular.module('app.home')
+        .controller('Home', Home)
+        .controller('MenuCtrl', MenuCtrl);
 
-    .controller('Home', function ($scope) {
-        this.content = 'Some text';
-    })
-    .controller('MenuCtrl', function ($scope, $location) {
-        $scope.getPath = function (path) {
+    MenuCtrl.$inject = ['$location'];
+
+    function Home() {
+        /*jshint validthis: true */
+        var vm = this;
+
+        vm.content = 'Some text';
+    }
+
+    function MenuCtrl($location) {
+        /*jshint validthis: true */
+        var vm = this;
+
+        vm.getPath = function (path) {
             if ($location.path().substr(0, path.length) == path) {
                 return "active"
             } else {
                 return ""
             }
         }
-    });
+    }
+
+})();
