@@ -7,7 +7,15 @@
     Home.$inject = ['$scope'];
 
     function Home($scope) {
-        $scope.content = 'Some text';
+        $scope.content = null;
+
+        $scope.setContent = function (value) {
+            $scope.content = value;
+        };
+
+        $scope.getContent = function () {
+            return true;
+        }
     }
 
 })();
