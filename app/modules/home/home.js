@@ -4,11 +4,10 @@
     angular.module('app.home')
         .controller('Home', Home);
 
-    function Home() {
-        /*jshint validthis: true */
-        var vm = this;
+    Home.$inject = ['$scope'];
 
-        vm.content = 'Some text';
+    function Home($scope) {
+        $scope.content = 'Some text';
     }
 
 })();
