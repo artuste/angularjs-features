@@ -27,6 +27,7 @@
     "karma-jasmine": "^0.2.2",
     "karma-junit-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sinon": "^1.0.4",
     "karma-sinon-chai": "^0.3.0",
     "mocha": "^2.2.1",
     "napa": "^0.4.1",
