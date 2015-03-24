@@ -13,15 +13,15 @@
         var vm = this;
 
         // Constructor Invocation Pattern
-        var _constructorInvocation = Svc.constructorInvocation(),
-            constructorInvocation = new _constructorInvocation(100, 'Invocation!');
+        var ConstructorInvocation = Svc.constructorInvocation(),
+            constructorInvocation = new ConstructorInvocation(100, 'Invocation!');
 
         vm.constructorInvocation = constructorInvocation.getProperties();
 
 
         // Observer Pattern
-        var _observer = Svc.observer(),
-            observer = new _observer;
+        var Observer = Svc.observer(),
+            observer = new Observer();
 
         observer.add({
             id: 200,
@@ -62,7 +62,7 @@
                 return {
                     id: this.id,
                     name: this.name
-                }
+                };
             };
 
             return Apple;

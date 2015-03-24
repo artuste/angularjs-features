@@ -15,7 +15,7 @@
 
         $scope.getContent = function () {
             return true;
-        }
+        };
     }
 
 })();

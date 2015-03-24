@@ -29,6 +29,7 @@
     wiMyAgeController.$inject = ['$scope'];
 
     function wiMyAgeController($scope) {
+        /* jshint validthis: true */
         var vm = this;
 
         active();
@@ -43,6 +44,7 @@
 
             $scope.$watch('vm.birthdate', function(current, original) {
                 if(current !== original) {
+
                     var age = new moment().diff(vm.birthdate, 'years');
 
                     age <= 0 ? vm.hideActionButtons = true : vm.hideActionButtons = false;

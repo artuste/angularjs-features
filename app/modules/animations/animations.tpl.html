@@ -1,0 +1,35 @@
+<div class="page-container">
+	<hgroup>
+	<h3 class="page-title">
+		Animations
+	</h3>
+		<h4>
+			Animations in AngularJS are completely based on CSS classes
+		</h4>
+	</hgroup>
+
+	<div class="well">
+		<form class="form-search">
+			<div class="input-append">
+				<input type="text" ng-model="search"/>
+			</div>
+			<ul class="nav nav-pills nav-stacked">
+				<li class="repeated-item" ng-repeat="item in collection | filter:search">
+					{{ item }}
+				</li>
+			</ul>
+		</form>
+	</div>
+
+	<div class="well">
+		<div ng-init="checked=true">
+			<label>
+				<input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> Is Visible...
+			</label>
+
+			<div class="check-element sample-show-hide" ng-show="checked" style="clear:both;">
+				Visible...
+			</div>
+		</div>
+	</div>
+</div>

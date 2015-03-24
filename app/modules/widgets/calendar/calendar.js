@@ -28,6 +28,7 @@
     wiCalendarController.$inject = ['$scope'];
 
     function wiCalendarController($scope) {
+        /* jshint validthis: true */
         var vm = this;
 
         vm.min = $scope.min;
