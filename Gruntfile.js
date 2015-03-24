@@ -71,10 +71,10 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            //less: {
-            //    files: ['app/css/*.less'],
-            //    tasks: ['less']
-            //},
+            less: {
+                files: ['app/css/*.less'],
+                tasks: ['less']
+            },
             //cssmin: {
             //    files: ['app/css/*.css'],
             //    tasks: ['cssmin']
