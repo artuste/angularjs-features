@@ -21,9 +21,9 @@ module.exports = function (config) {
             'bower_components/angular-translate/angular-translate.js',
             'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
             'bower_components/angular-translate-loader-url/angular-translate-loader-url.js',
+            'app/modules/app.js',
             'app/modules/**/*.module.js',
             'app/modules/**/*.js',
-            'app/modules/app.js',
             'tests/*/*Spec.js'
         ],
 
