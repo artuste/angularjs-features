@@ -7,7 +7,6 @@
 
     common.$inject = ['$location', '$q', '$rootScope', '$timeout'];
 
-
     function common($location, $q, $rootScope, $timeout) {
         var throttles = {};
 
@@ -26,6 +25,7 @@
 
         return service;
         //////////////////////
+
 
         function $broadcast() {
             return $rootScope.$broadcast.apply($rootScope, arguments);

@@ -50,7 +50,7 @@
                     age <= 0 ? vm.hideActionButtons = true : vm.hideActionButtons = false;
                 }
             });
-        };
+        }
 
         function actionButtons() {
             vm.getAge = function () {
@@ -61,7 +61,7 @@
                 vm.birthdate = null;
                 vm.age = null;
             };
-        };
+        }
     }
 
 

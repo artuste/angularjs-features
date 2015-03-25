@@ -5,10 +5,10 @@
         .controller('SeatReservation', SeatReservation)
         .factory('SeatReservationSvc', SeatReservationSvc);
 
-    SeatReservation.$inject = ['$scope', 'SeatReservationSvc'];
-    SeatReservationSvc.$inject = ['$q'];
+    SeatReservation.$inject = ['$scope', 'SeatReservationSvc', 'logger'];
+    SeatReservationSvc.$inject = ['common'];
 
-    function SeatReservation($scope, SeatReservationSvc) {
+    function SeatReservation($scope, SeatReservationSvc, logger) {
         $scope.moduleUrl = 'app/modules/seatReservation/';
 
         $scope.selected = [];
@@ -20,7 +20,7 @@
         // seat onClick
         $scope.seatClicked = function(seatPos) {
             var index = $scope.selected.indexOf(seatPos);
-            if(index != -1) {
+            if(index !== -1) {
                 // seat already selected, remove
                 $scope.selected.splice(index, 1)
             } else {
@@ -47,18 +47,18 @@
         $scope.register = function() {
             SeatReservationSvc.register()
                 .then(function () {
-                    // todo
+                    logger.success('Ok!');
                 });
         };
     }
 
-    function SeatReservationSvc($q) {
+    function SeatReservationSvc(common) {
         return {
             register: register
         };
 
         function register() {
-            var deferred = $q.defer();
+            var deferred = common.$q.defer();
 
             deferred.resolve();
 
