@@ -20,7 +20,7 @@ describe('Seat reservation', function () {
     });
 
     it('should be defined cols', function () {
-        expect(scope.rows).toBeDefined();
+        expect(scope.cols).toBeDefined();
     });
 
     it("should clicked seat", function () {
@@ -30,4 +30,5 @@ describe('Seat reservation', function () {
     it("should get status", function () {
         expect(scope.getStatus).toHaveBeenCalled();
     });
+
 });
