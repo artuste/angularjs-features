@@ -40,11 +40,11 @@ describe('Seat reservation', function () {
 
     it("should get clearSelected", function () {
         spyOn(scope, 'clearSelected').and.callFake(function() {
-            selected = ['I5'];
+            scope.selected = ['I5'];
         });
         scope.clearSelected();
 
         expect(scope.clearSelected).toHaveBeenCalled();
-        expect(selected).toEqual(['I5']);
+        expect(scope.selected).toEqual(['I5']);
     });
 });
