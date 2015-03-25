@@ -16,9 +16,12 @@
         var reserved = ['A2', 'A3', 'C5', 'C6', 'C7', 'C8', 'J1', 'J2', 'J3', 'J4'],
             selected = [];
 
+        $scope.testFnc = function () {
+            return 'test';
+        };
+
         // seat onClick
         $scope.seatClicked = function(seatPos) {
-            console.log("Selected Seat: " + seatPos);
             var index = selected.indexOf(seatPos);
             if(index != -1) {
                 // seat already selected, remove
