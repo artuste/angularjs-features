@@ -1,5 +1,6 @@
 describe('Promises', function() {
-    var $rootScope,
+    var deferred,
+        $rootScope,
         $httpBackend,
         Promises,
         DataService;
@@ -13,8 +14,10 @@ describe('Promises', function() {
 
         $httpBackend.when("GET", "app/modules/promises/data.json").respond({});
 
-        var deferred = $q.defer();
-        deferred.resolve('test');
+        deferred = $q.defer();
+        deferred.resolve({
+            code: 101
+        });
 
         spyOn(DataService, 'getHttpData').and.returnValue(deferred.promise);
     }));
@@ -31,7 +34,9 @@ describe('Promises', function() {
             });
 
         $rootScope.$apply(); // promises are resolved/dispatched only on next $digest cycle
-        expect(result).toBe('test');
+        expect(result).toEqual({
+            code: 101
+        });
     });
 
 });
