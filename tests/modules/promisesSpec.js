@@ -26,6 +26,11 @@ describe('Promises', function() {
         expect(Promises).toBeDefined();
     });
 
+    it('should timeoutDataData to be defined', function () {
+        Promises.timeoutDataData = 'test 2';
+        expect(Promises.timeoutDataData).toEqual('test 2');
+    });
+
     it('should getHttpData', function () {
         var result;
         DataService.getHttpData()
@@ -38,5 +43,4 @@ describe('Promises', function() {
             code: 101
         });
     });
-
 });
