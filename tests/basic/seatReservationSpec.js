@@ -1,5 +1,8 @@
 describe('Seat reservation', function () {
-   var scope,
+    var scope,
+        common,
+        SeatReservationSvc,
+        logger,
         reserved = ['A2', 'A3', 'C5', 'C6', 'C7', 'C8', 'J1', 'J2', 'J3', 'J4'],
         selected = [];
 
@@ -7,9 +10,13 @@ describe('Seat reservation', function () {
     beforeEach(inject(function ($controller, $rootScope) {
         scope = $rootScope.$new();
         $controller('SeatReservation', {
-            $scope: scope
+            $scope: scope,
+            common: common,
+            SeatReservationSvc: SeatReservationSvc,
+            logger: logger
         });
     }));
+
 
     it('should be defined rows', function () {
         expect(scope.rows).toBeDefined();
@@ -39,7 +46,7 @@ describe('Seat reservation', function () {
     });
 
     it("should get clearSelected", function () {
-        spyOn(scope, 'clearSelected').and.callFake(function() {
+        spyOn(scope, 'clearSelected').and.callFake(function () {
             scope.selected = ['I5'];
         });
         scope.clearSelected();
