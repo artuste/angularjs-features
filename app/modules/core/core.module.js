@@ -21,8 +21,6 @@
          */
         'ui.utils',
         'ui.bootstrap',
-        'angularMoment',
-        'oc.lazyLoad'
-
+        'angularMoment'
     ]);
 })();

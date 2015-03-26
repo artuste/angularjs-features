@@ -8,7 +8,7 @@
     logger.$inject = ['$log', 'toastr'];
 
     function logger($log, toastr) {
-        var service = {
+        return {
             showToasts: true,
 
             error   : error,
@@ -19,8 +19,6 @@
             // straight to console; bypass toastr
             log     : $log.log
         };
-
-        return service;
         /////////////////////
 
         function error(message, data, title) {
