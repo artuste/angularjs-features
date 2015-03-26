@@ -40,6 +40,5 @@ describe('Interpolation Controller', function () {
 
         expect(url).toEqual('/api2/name/John');
     });
-
 });
 

@@ -17,7 +17,6 @@ describe('Seat reservation', function () {
         });
     }));
 
-
     it('should be defined rows', function () {
         expect(scope.rows).toBeDefined();
     });
@@ -25,7 +24,6 @@ describe('Seat reservation', function () {
     it('should be defined cols', function () {
         expect(scope.cols).toBeDefined();
     });
-
 
     it("should clicked seat", function () {
         var index = -1;
