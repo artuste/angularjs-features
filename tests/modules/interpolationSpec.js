@@ -14,10 +14,6 @@ describe('Interpolation Controller', function () {
         });
     }));
 
-    it('should asd', function () {
-        expect(true).toBe(true);
-    });
-
     it('should interpolate', function () {
         var url,
             options = {

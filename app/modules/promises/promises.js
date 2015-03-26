@@ -6,9 +6,9 @@
         .controller('Promises', Promises)
         .factory('DataService', DataService);
 
-    Promises.$inject = ['common', 'DataService'];
+    Promises.$inject = ['DataService'];
 
-    function Promises(common, DataService) {
+    function Promises(DataService) {
         /*jshint validthis: true */
         var vm = this;
 
