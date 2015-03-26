@@ -19,6 +19,7 @@
         /*
          * 3rd Party modules
          */
+        'ui.utils',
         'ui.bootstrap',
         'angularMoment',
         'oc.lazyLoad'

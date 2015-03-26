@@ -1,0 +1,28 @@
+<div class="page-container">
+	<hgroup>
+		<h3 class="page-title">
+			UI.Utils
+		</h3>
+		<h4>
+			Swiss-Army-Knife of AngularJS tools (with no external dependencies!)
+		</h4>
+	</hgroup>
+
+	<div class="well">
+		<h4>On blur</h4>
+		<input ui-event="{ blur : 'vm.blurCallback($event)' }">
+	</div>
+
+	<div class="well">
+		<h4>Mask</h4>
+
+		<form name="ccForm">
+			<input name="creditCardNumber" ui-mask="9999 9999 9999 9999" ng-model="vm.creditCardNumber" />
+			<pre>
+				{{ ccForm.creditCardNumber | json}}
+			</pre>
+
+			<button class="btn btn-default" ng-disabled="!vm.creditCardNumber || ccForm.creditCardNumber.$invalid">Save</button>
+		</form>
+	</div>
+</div>
