@@ -20,7 +20,8 @@
                                 'app/modules/widgets/widgets.module.js',
                                 'app/modules/widgets/widgets.js',
                                 'app/modules/widgets/calendar/calendar.js',
-                                'app/modules/widgets/myAge/myAge.js'
+                                'app/modules/widgets/myAge/myAge.js',
+                                'app/modules/widgets/tooltips/tooltips.js'
                             ]
                         });
                     }]
