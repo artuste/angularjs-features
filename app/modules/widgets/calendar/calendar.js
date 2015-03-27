@@ -3,36 +3,43 @@
 
     angular
         .module('app.widgets')
-        .controller('wiCalendarController', wiCalendarController)
-        .directive('wiCalendar', wiCalendar);
+        .controller('Calendar', Calendar);
 
-    function wiCalendar() {
-        var directive = {
-            link: link,
-            templateUrl: 'app/modules/widgets/calendar/calendar.tpl.html',
-            restrict: 'EA',
-            scope: {
-                min: '='
-            },
-            controller: 'wiCalendarController',
-            controllerAs: 'vm'
-        };
-        return directive;
+    Calendar.$inject = ['$log'];
 
-
-        function link(scope, element, attrs) {
-
-        }
-    }
-
-    wiCalendarController.$inject = ['$scope'];
-
-    function wiCalendarController($scope) {
+    function Calendar($log) {
         /* jshint validthis: true */
         var vm = this;
 
-        vm.min = $scope.min;
-        vm.max = 100;
+        vm.eventSources = {};
+
+        vm.uiConfig = {
+            calendar:{
+                height: 450,
+                editable: true,
+                header:{
+                    left: 'month basicWeek basicDay agendaWeek agendaDay',
+                    center: 'title',
+                    right: 'today prev,next'
+                },
+                dayClick: vm.alertEventOnClick,
+                eventDrop: vm.alertOnDrop,
+                eventResize: vm.alertOnResize
+            }
+        };
+
+        vm.alertEventOnClick = function () {
+            $log('alertEventOnClick');
+        };
+
+        vm.alertOnDrop = function () {
+            $log('alertOnDrop');
+        };
+
+        vm.alertOnResize = function () {
+            $log('alertOnResize');
+        };
+
     }
 
 })();

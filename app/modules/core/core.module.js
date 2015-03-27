@@ -21,6 +21,7 @@
          */
         'ui.utils',
         'ui.bootstrap',
-        'angularMoment'
+        'angularMoment',
+        'ui.calendar'
     ]);
 })();

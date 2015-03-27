@@ -1,10 +1,1 @@
-<h3>wiCalendar</h3>
-<div class="container">
-    <label>
-        Min:
-        <input type="number" ng-model="vm.min" />
-    </label>
-
-    <p>Min: {{vm.min}}</p>
-    <p>Max: {{vm.max}}</p>
-</div>
+<div class="well" ui-calendar="vm.uiConfig.calendar" ng-model="vm.eventSources"></div>
