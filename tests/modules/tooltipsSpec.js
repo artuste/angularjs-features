@@ -1,6 +1,7 @@
 describe('Tooltips/directive', function () {
 
-    var $scope,
+    var element,
+        $scope,
         $compile,
         $httpBackend;
 
@@ -14,10 +15,12 @@ describe('Tooltips/directive', function () {
     }));
 
     it('should render directive', function () {
-        $compile('<component-tooltip></component-tooltip>');
+        element = '<component-tooltip></component-tooltip>';
+        $compile(element)($scope);
 
         $scope.message = 'test mesg';
 
+        $httpBackend.flush();
         $scope.$digest();
     });
 });

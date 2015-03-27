@@ -88,7 +88,7 @@ module.exports = function (grunt) {
             //    tasks: ['htmlhint']
             //},
             karma: {
-                files: ['tests/*/*.js'],
+                files: ['app/modules/**/*.js', 'tests/*/*.js'],
                 tasks: 'karma'
             }
         },

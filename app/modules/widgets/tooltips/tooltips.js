@@ -14,15 +14,10 @@
             },
             templateUrl: 'app/modules/widgets/tooltips/tooltips.html',
             controller: componentTooltipCtrl
-            //compile: compile
         };
     }
 
     function componentTooltipCtrl($scope) {
         $scope.infix = 'M.V.B.';
     }
-
-    //function compile(tElement, tAttrs) {
-    //
-    //}
 })();
