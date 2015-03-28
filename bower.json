@@ -55,6 +55,7 @@
     "angular-ui-router": "~0.2.13",
     "angular-toastr": "~1.1.0",
     "angular-ui-utils": "bower",
-    "angular-ui-calendar": "latest"
+    "angular-ui-calendar": "latest",
+    "angular-dynforms": "~0.0.4"
   }
 }

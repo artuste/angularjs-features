@@ -22,6 +22,7 @@
         'ui.utils',
         'ui.bootstrap',
         'angularMoment',
-        'ui.calendar'
+        'ui.calendar',
+        'dynform'
     ]);
 })();

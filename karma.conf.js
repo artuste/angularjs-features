@@ -32,6 +32,7 @@ module.exports = function (config) {
             'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
             'bower_components/angular-translate-loader-url/angular-translate-loader-url.js',
             'bower_components/angular-toastr/dist/angular-toastr.tpls.js',
+            'bower_components/angular-dynforms/dynamic-forms.js',
             'app/modules/app.js',
             'app/modules/**/*.module.js',
             'app/modules/**/*.js',
