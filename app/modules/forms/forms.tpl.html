@@ -1,0 +1,18 @@
+<div class="page-container">
+    <hgroup>
+        <h3 class="page-title">
+            Forms from JSON
+        </h3>
+    </hgroup>
+
+
+    <form-template-data url="app/modules/forms/form.data.json">
+        <div ng-if="vm.formTemplate">
+            <dynamic-form template="vm.formTemplate"
+                          ng-model="vm.formData"
+                          ng-submit="vm.processForm()">
+            </dynamic-form>
+        </div>
+    </form-template-data>
+
+</div>
