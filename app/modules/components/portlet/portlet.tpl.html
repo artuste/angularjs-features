@@ -3,5 +3,5 @@
     <div class="panel-body" ng-transclude>
 
     </div>
-    <div class="panel-footer">{{ footerText }}</div>
+    <div ng-if="footerText" class="panel-footer">{{ footerText }}</div>
 </div>
