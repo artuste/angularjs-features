@@ -11,6 +11,7 @@
             restrict: 'AE',
             transclude: true,
             scope: {
+                name: '@',
                 header: '@',
                 className: '@',
                 footerText: '@',
@@ -28,13 +29,12 @@
         $scope.getFormSettings = function () {
             return componentPortletData.getFormSettings($scope.schema, $scope.formDefinition);
         }
-
     }
 
     function link(scope, element, attrs, ctrl, transclude) {
         scope.getFormSettings()
             .then(function (response) {
-                scope.$parent.vm.formSettings = {
+                scope.$parent.vm.formSettings[scope.name] = {
                     schema: response[0].data,
                     formDefinition: response[1].data
                 };

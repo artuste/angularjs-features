@@ -9,14 +9,12 @@
         var vm = this;
 
         //Schema Form
-        vm.model = {};
+        vm.model1 = {};
+        vm.model2 = {};
 
-
-        // Angular Dynamics Form
-        vm.formData = {};
-
-        vm.processForm = function () {
-            /* Handle the form submission... */
+        vm.formSettings = {
+            form1: {},
+            form2: {}
         };
     }
 
