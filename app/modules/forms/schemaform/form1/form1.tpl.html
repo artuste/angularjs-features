@@ -1,0 +1,11 @@
+<component-portlet
+        name="form1"
+        header="Primary"
+        class-name="panel-primary"
+        schema="app/modules/forms/schemaform/form1/schema.json"
+        form-definition="app/modules/forms/schemaform/form1/formDefinition.json">
+    <form ng-if="vm.formSettings"
+          sf-schema="vm.formSettings.form1.schema"
+          sf-form="vm.formSettings.form1.formDefinition"
+          sf-model="vm.model1"></form>
+</component-portlet>

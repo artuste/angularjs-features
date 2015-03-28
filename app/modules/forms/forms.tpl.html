@@ -8,31 +8,11 @@
 
     <div class="row">
         <div class="col-md-6">
-            <component-portlet
-                    name="form1"
-                    header="Primary"
-                    class-name="panel-primary"
-                    schema="app/modules/forms/schemaform/form1/schema.json"
-                    form-definition="app/modules/forms/schemaform/form1/formDefinition.json">
-                <form ng-if="vm.formSettings"
-                      sf-schema="vm.formSettings.form1.schema"
-                      sf-form="vm.formSettings.form1.formDefinition"
-                      sf-model="vm.model1"></form>
-            </component-portlet>
+            <div ng-include="'app/modules/forms/schemaform/form1/form1.tpl.html'"></div>
         </div>
 
         <div class="col-md-6">
-            <component-portlet
-                    name="form2"
-                    header="Success"
-                    class-name="panel-success"
-                    schema="app/modules/forms/schemaform/form2/schema.json"
-                    form-definition="app/modules/forms/schemaform/form2/formDefinition.json">
-                <form ng-if="vm.formSettings"
-                      sf-schema="vm.formSettings.form2.schema"
-                      sf-form="vm.formSettings.form2.formDefinition"
-                      sf-model="vm.model2"></form>
-            </component-portlet>
+            <div ng-include="'app/modules/forms/schemaform/form2/form2.tpl.html'"></div>
         </div>
     </div>
 
