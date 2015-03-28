@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.core')
+        .module('ui.components')
         .directive('formTemplateData', formTemplateData);
 
     function formTemplateData() {

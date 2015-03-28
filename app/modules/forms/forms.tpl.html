@@ -6,13 +6,27 @@
     </hgroup>
 
 
-    <form-template-data url="app/modules/forms/form.data.json">
-        <div ng-if="vm.formTemplate">
-            <dynamic-form template="vm.formTemplate"
-                          ng-model="vm.formData"
-                          ng-submit="vm.processForm()">
-            </dynamic-form>
-        </div>
-    </form-template-data>
+    <component-portlet
+            class-name="panel-primary"
+            footer-text="Portlet"
+            schema="app/modules/forms/schemaform/schema.json"
+            form-definition="app/modules/forms/schemaform/formDefinition.json">
+
+        <form ng-if="vm.formSettings" sf-schema="vm.formSettings.schema" sf-form="vm.formSettings.formDefinition" sf-model="vm.model"></form>
+
+
+        <!--Angular dynamic form-->
+        <!--<div id="angular-dynamic-form-example">-->
+        <!--<form-template-data url="app/modules/forms/form.data.json"></form-template-data>-->
+
+        <!--<dynamic-form template="vm.formTemplate"-->
+        <!--ng-model="vm.formData"-->
+        <!--ng-submit="vm.processForm()"-->
+        <!--ng-if="vm.formTemplate">-->
+        <!--</dynamic-form>-->
+        <!--</div>-->
+
+    </component-portlet>
+
 
 </div>

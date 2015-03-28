@@ -15,6 +15,7 @@
         /*
          * Our reusable cross app code modules
          */
+        'ui.components',
 
         /*
          * 3rd Party modules
@@ -23,6 +24,7 @@
         'ui.bootstrap',
         'angularMoment',
         'ui.calendar',
-        'dynform'
+        'dynform',
+        'schemaForm'
     ]);
 })();
