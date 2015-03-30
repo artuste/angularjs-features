@@ -27,6 +27,7 @@
         };
     }
 
+
     function componentPortletCtrl($scope, componentPortletData) {
         $scope.getFormSettings = function () {
             return componentPortletData.getFormSettings($scope.schema, $scope.formDefinition);

@@ -70,11 +70,28 @@ module.exports = function (grunt) {
                 }
             }
         },
+        jscs: {
+            src: "app/modules/**/*.js",
+            options: {
+                config: ".jscsrc",
+                //"preset": "crockford",
+                requireCurlyBraces: [
+                    "if",
+                    "else",
+                    "while",
+                    "for"
+                ]
+            }
+        },
         watch: {
             less: {
                 files: ['app/css/*.less'],
                 tasks: ['less']
             },
+            //jscs: {
+            //  files: ['app/modules/**/*.js'],
+            //    task: ['jscs']
+            //},
             //cssmin: {
             //    files: ['app/css/*.css'],
             //    tasks: ['cssmin']
@@ -118,6 +135,7 @@ module.exports = function (grunt) {
     //    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-htmlhint');
+    grunt.loadNpmTasks("grunt-jscs");
 
     // My tasks
     grunt.registerTask('hints', ['jshint', 'htmlhint']);
