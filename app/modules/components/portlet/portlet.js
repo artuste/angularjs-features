@@ -11,15 +11,15 @@
             restrict: 'AE',
             transclude: true,
             scope: {
-                name: '@',
-                header: '@',
-                className: '@',
-                footerText: '@',
-
                 vmModel: '@',
 
                 schema: '@',
-                formDefinition: '@'
+                formDefinition: '@',
+
+                name: '@',
+                header: '@',
+                className: '@',
+                footerText: '@'
             },
             link: link,
             controller: componentPortletCtrl,
@@ -33,7 +33,7 @@
         }
     }
 
-    function link(scope, element, attrs, ctrl, transclude) {
+    function link(scope) {
         scope.getFormSettings()
             .then(function (response) {
                 scope.$parent.vm[scope.vmModel][scope.name] = {
@@ -50,7 +50,6 @@
 
         function _getJsonData(url) {
             return $http.get(url);
-
         }
 
         function getFormSettings(schema, formDefinition) {
