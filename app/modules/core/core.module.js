@@ -24,7 +24,6 @@
         'ui.bootstrap',
         'angularMoment',
         'ui.calendar',
-        'dynform',
         'schemaForm'
     ]);
 })();
