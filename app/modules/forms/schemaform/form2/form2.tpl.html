@@ -1,11 +1,11 @@
 <component-portlet
+		vm-model="formSettings"
         name="form2"
         header="Success"
         class-name="panel-success"
         schema="app/modules/forms/schemaform/form2/schema.json"
         form-definition="app/modules/forms/schemaform/form2/formDefinition.json">
-    <form ng-if="vm.formSettings"
-          sf-schema="vm.formSettings.form2.schema"
+    <form sf-schema="vm.formSettings.form2.schema"
           sf-form="vm.formSettings.form2.formDefinition"
           sf-model="vm.model2"></form>
 </component-portlet>

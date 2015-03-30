@@ -16,6 +16,8 @@
                 className: '@',
                 footerText: '@',
 
+                vmModel: '@',
+
                 schema: '@',
                 formDefinition: '@'
             },
@@ -34,7 +36,7 @@
     function link(scope, element, attrs, ctrl, transclude) {
         scope.getFormSettings()
             .then(function (response) {
-                scope.$parent.vm.formSettings[scope.name] = {
+                scope.$parent.vm[scope.vmModel][scope.name] = {
                     schema: response[0].data,
                     formDefinition: response[1].data
                 };
