@@ -2,14 +2,14 @@
 
 <p>In command-line go to the project folder.</p>
 
-<h2>Install npm</h2>
+<h3>Install npm</h3>
 <pre>npm install</pre>
 
-<h2>Install bower</h2>
+<h3>Install bower</h3>
 <p>Because Bower is using Git repository, run it in Git bash command-line.</p>
 <pre>bower install</pre>
 
-<h2>Run default Grunt task</h2>
+<h3>Run default Grunt task</h3>
 <pre>grunt</pre>
 
 <h2>E2E Tests</h2>
