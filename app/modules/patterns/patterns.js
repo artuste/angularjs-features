@@ -49,7 +49,7 @@
         return {
             constructorInvocation: constructorInvocation,
             observer: observer,
-            module: module
+            module: tModule
         };
 
         function constructorInvocation(id, name) {
@@ -82,7 +82,7 @@
 
             return ObserverList;
         }
-        function module(variableValue) {
+        function tModule(variableValue) {
             var myObjectLiteral = {
                 variableKey: variableValue,
                 getKeyName: function () {

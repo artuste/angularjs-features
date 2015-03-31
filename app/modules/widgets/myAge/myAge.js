@@ -44,17 +44,19 @@
 
             $scope.$watch('vm.birthdate', function(current, original) {
                 if(current !== original) {
+                    var age = moment().diff(vm.birthdate, 'years');
 
-                    var age = new moment().diff(vm.birthdate, 'years');
-
-                    age <= 0 ? vm.hideActionButtons = true : vm.hideActionButtons = false;
+                    vm.hideActionButtons = false;
+                    if(age <= 0) {
+                        vm.hideActionButtons = true;
+                    }
                 }
             });
         }
 
         function actionButtons() {
             vm.getAge = function () {
-                vm.age = new moment().diff(vm.birthdate, 'years');
+                vm.age = moment().diff(vm.birthdate, 'years');
             };
 
             vm.reset = function () {

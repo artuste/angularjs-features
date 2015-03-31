@@ -12,7 +12,7 @@
 
         vm.blurCallback = function (e) {
             logger.info('Ok!', '', 'Blur callback');
-        }
+        };
     }
 
 })();

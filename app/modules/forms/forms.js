@@ -2,7 +2,7 @@
     "use strict";
 
     angular.module('app.forms')
-        .controller('Forms', Forms)
+        .controller('Forms', Forms);
 
     function Forms() {
         /*jshint validthis: true */

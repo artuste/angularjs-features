@@ -22,7 +22,7 @@
             var index = $scope.selected.indexOf(seatPos);
             if(index !== -1) {
                 // seat already selected, remove
-                $scope.selected.splice(index, 1)
+                $scope.selected.splice(index, 1);
             } else {
                 // new seat, push
                 $scope.selected.push(seatPos);
