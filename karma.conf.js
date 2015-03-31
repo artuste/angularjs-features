@@ -40,7 +40,8 @@ module.exports = function (config) {
             'app/modules/app.js',
             'app/modules/**/*.module.js',
             'app/modules/**/*.js',
-            'tests/*/*Spec.js'
+            'tests/unit/*Spec.js',
+            'tests/unit/**/*Spec.js'
         ],
 
         plugins: [
