@@ -43,4 +43,4 @@ exports.config = {
 </pre>
 
 <h4>Run tests</h4>
-<pre>protractor e2e-basic.js</pre>
+<pre>protractor protractor.conf.js</pre>
