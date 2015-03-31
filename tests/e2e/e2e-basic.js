@@ -1,5 +1,7 @@
-describe('angularjs homepage todo list', function() {
-    it('should add a todo', function() {
-        browser.get('http://www.angularjs.org');
+describe('Protractor Demo App', function() {
+    it('should have a title', function() {
+        browser.get('http://juliemr.github.io/protractor-demo/');
+
+        expect(browser.getTitle()).toEqual('Super Calculator');
     });
 });
