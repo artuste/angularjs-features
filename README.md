@@ -12,13 +12,13 @@
 <h3>Run default Grunt task</h3>
 <pre>grunt</pre>
 
-<h2>E2E Tests</h2>
-<h3>Setup</h3>
+<h3>E2E Tests</h3>
+<h4>Setup</h4>
 <pre>npm install -g protractor</pre>
 <pre>webdriver-manager update</pre>
 <pre>webdriver-manager start</pre>
 
-<h3>Configuration</h3>
+<h4>Configuration</h4>
 <b>protractor.conf.js</b>
 <pre>
 exports.config = {
@@ -42,5 +42,5 @@ exports.config = {
 };
 </pre>
 
-<h3>Run tests</h3>
+<h4>Run tests</h4>
 <pre>protractor e2e-basic.js</pre>
