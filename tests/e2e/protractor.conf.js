@@ -1,3 +1,6 @@
+// Run tests:
+// cmd: protractor protractor.conf.js
+
 exports.config = {
   allScriptsTimeout: 11000,
 
