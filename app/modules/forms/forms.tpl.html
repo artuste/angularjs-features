@@ -5,12 +5,12 @@
 		</h3>
 	</hgroup>
 	<div class="row">
-		<h2>Todos</h2>
+		<h2>Table list items</h2>
 
 		<div>
 			<table class="table table-condensed table-bordered">
-				<tr ng-repeat="todo in vm.tableList">
-					<td><input type="text" ng-model="todo.text"/></td>
+				<tr ng-repeat="item in vm.tableList">
+					<td><input type="text" ng-model="item.text"/></td>
 					<td><span class="glyphicon glyphicon-remove" ng-click="vm.remove($index)"></span></td>
 				</tr>
 			</table>
