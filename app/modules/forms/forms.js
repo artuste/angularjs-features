@@ -4,9 +4,30 @@
     angular.module('app.forms')
         .controller('Forms', Forms);
 
-    function Forms() {
+    Forms.$inject = ['$filter'];
+
+    function Forms($filter) {
         /*jshint validthis: true */
         var vm = this;
+
+        vm.tableList = [
+            { text: 'Item 1'},
+            { text: 'Item 2'}
+        ];
+
+        vm.addWithValue = function () {
+            vm.tableList.push({text: vm.text});
+            vm.text = '';
+        };
+
+        vm.addEmpty = function () {
+            vm.tableList.push({text: ''});
+        };
+
+        vm.remove = function (index) {
+            vm.tableList.splice(index, 1);
+        };
+
 
         //Schema Form
         vm.model1 = {};

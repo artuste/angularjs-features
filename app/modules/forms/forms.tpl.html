@@ -1,19 +1,38 @@
 <div class="page-container">
-    <hgroup>
-        <h3 class="page-title">
-            Forms from JSON
-        </h3>
-    </hgroup>
+	<hgroup>
+		<h3 class="page-title">
+			Forms from JSON
+		</h3>
+	</hgroup>
+	<div class="row">
+		<h2>Todos</h2>
 
+		<div>
+			<table class="table table-condensed table-bordered">
+				<tr ng-repeat="todo in vm.tableList">
+					<td><input type="text" ng-model="todo.text"/></td>
+					<td><span class="glyphicon glyphicon-remove" ng-click="vm.remove($index)"></span></td>
+				</tr>
+			</table>
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="animated zoomInDown" ng-include="'app/modules/forms/schemaform/form1/form1.tpl.html'"></div>
-        </div>
+			<form>
+				<input type="text" ng-model="vm.text" size="30"
+				       placeholder="add new item">
+				<button class="btn-primary" ng-click="vm.addWithValue()">Add new input with value</button>
+				<button class="btn-primary" ng-click="vm.addEmpty()">Add new input without value</button>
+			</form>
+		</div>
+	</div>
+	<hr/>
 
-        <div class="col-md-6">
-            <div class="animated zoomInDown" ng-include="'app/modules/forms/schemaform/form2/form2.tpl.html'"></div>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="animated zoomInDown" ng-include="'app/modules/forms/schemaform/form1/form1.tpl.html'"></div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="animated zoomInDown" ng-include="'app/modules/forms/schemaform/form2/form2.tpl.html'"></div>
+		</div>
+	</div>
 
 </div>
