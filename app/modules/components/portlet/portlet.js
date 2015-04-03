@@ -12,6 +12,7 @@
             transclude: true,
             scope: {
                 vmModel: '@',
+                basicMode: '@',
 
                 schema: '@',
                 formDefinition: '@',
@@ -30,18 +31,20 @@
 
     function componentPortletCtrl($scope, componentPortletData) {
         $scope.getFormSettings = function () {
-            return componentPortletData.getFormSettings($scope.schema, $scope.formDefinition);
+            return !$scope.basicMode ? componentPortletData.getFormSettings($scope.schema, $scope.formDefinition) : true;
         };
     }
 
     function link(scope) {
-        scope.getFormSettings()
-            .then(function (response) {
-                scope.$parent.vm[scope.vmModel][scope.name] = {
-                    schema: response[0].data,
-                    formDefinition: response[1].data
-                };
-            });
+        if (!scope.basicMode) {
+            scope.getFormSettings()
+                .then(function (response) {
+                    scope.$parent.vm[scope.vmModel][scope.name] = {
+                        schema: response[0].data,
+                        formDefinition: response[1].data
+                    };
+                });
+        }
     }
 
     function componentPortletData($q, $http) {

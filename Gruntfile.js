@@ -114,14 +114,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-	
 	grunt.loadNpmTasks('grunt-contrib-connect');
-
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-wiredep');
-
-    //    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks("grunt-jscs");
@@ -129,6 +125,5 @@ module.exports = function (grunt) {
     // My tasks
     grunt.registerTask('hints', ['jshint', 'htmlhint']);
     grunt.registerTask('less-css', ['less', 'cssmin']);
-
     grunt.registerTask('default', ['connect']);
 };

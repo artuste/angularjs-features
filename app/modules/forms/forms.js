@@ -10,6 +10,10 @@
         /*jshint validthis: true */
         var vm = this;
 
+        vm.tableListModelOptions = {
+            updateOn: 'blur'
+        };
+
         vm.tableList = [
             { text: 'Item 1'},
             { text: 'Item 2'}
