@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h3 class="modal-title">Popup</h3>
+</div>
+<div class="modal-body">
+
+    <form name="form" role="form">
+        <label>
+            <span>Id: </span>
+            <input type="number" ng-model="popup.popupModel.id" />
+        </label>
+
+        <label>
+            <span>First name: </span>
+            <input type="text" ng-model="popup.popupModel.firstName" />
+        </label>
+
+        <label>
+            <span>Last name: </span>
+            <input type="text" ng-model="popup.popupModel.lastName" />
+        </label>
+
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="popup.save()">Save</button>
+    <button class="btn btn-warning" ng-click="popup.cancel()">Cancel</button>
+</div>

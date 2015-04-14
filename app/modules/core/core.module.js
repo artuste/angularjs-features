@@ -24,6 +24,7 @@
         'ui.bootstrap',
         'angularMoment',
         'ui.calendar',
-        'schemaForm'
+        'schemaForm',
+        'angular-lodash'
     ]);
 })();
