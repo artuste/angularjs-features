@@ -15,7 +15,7 @@
         /*
          * Our reusable cross app code modules
          */
-        'ui.components',
+        'ui.components', 'tools',
 
         /*
          * 3rd Party modules
