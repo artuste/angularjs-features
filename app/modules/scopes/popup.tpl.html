@@ -4,21 +4,24 @@
 <div class="modal-body">
 
     <form name="form" role="form">
-        <label>
-            <span>Id: </span>
-            <input type="number" ng-model="popup.popupModel.id" />
-        </label>
-
-        <label>
-            <span>First name: </span>
-            <input type="text" ng-model="popup.popupModel.firstName" />
-        </label>
-
-        <label>
-            <span>Last name: </span>
-            <input type="text" ng-model="popup.popupModel.lastName" />
-        </label>
-
+        <div class="form-group">
+            <label>
+                <span>Id: </span>
+                <input class="form-control" type="number" ng-model="popup.popupModel.id"/>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <span>First name: </span>
+                <input class="form-control" type="text" ng-model="popup.popupModel.firstName"/>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <span>Last name: </span>
+                <input class="form-control" type="text" ng-model="popup.popupModel.lastName"/>
+            </label>
+        </div>
     </form>
 
 </div>
