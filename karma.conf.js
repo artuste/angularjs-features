@@ -37,6 +37,8 @@ module.exports = function (config) {
             'bower_components/objectpath/lib/ObjectPath.js',
             'bower_components/angular-schema-form/dist/schema-form.js',
             'bower_components/angular-schema-form/dist/bootstrap-decorator.js',
+            'bower_components/lodash/dist/lodash.compat.js',
+            'bower_components/angular-lodash/angular-lodash.js',
             'app/modules/app.js',
             'app/modules/**/*.module.js',
             'app/modules/**/*.js',
