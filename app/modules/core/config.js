@@ -2,30 +2,11 @@
     'use strict';
 
     angular.module('app')
-        .config(['$stateProvider', '$locationProvider', 'toastrConfig', config]);
+        .config(['$urlRouterProvider', '$locationProvider', 'toastrConfig', config]);
 
-    function config($stateProvider, $locationProvider, toastrConfig) {
+    function config($urlRouterProvider, $locationProvider, toastrConfig) {
         //$locationProvider.html5Mode(true);
-        //$urlRouterProvider.otherwise("/home");
-
-        //$stateProvider
-        //    .state('scopes', {
-        //        url: '/scopes',
-        //        templateUrl: 'app/modules/scopes/scopes.tpl.html',
-        //        controller: 'Scopes',
-        //        controllerAs: 'vm',
-        //        resolve: {
-        //            loadModule: ['$ocLazyLoad', function ($ocLazyLoad) {
-        //                return $ocLazyLoad.load({
-        //                    name: 'app.scopes',
-        //                    files: [
-        //                        'app/modules/scopes/scopes.module.js',
-        //                        'app/modules/scopes/scopes.js'
-        //                    ]
-        //                });
-        //            }]
-        //        }
-        //    });
+        $urlRouterProvider.otherwise("/home");
 
         angular.extend(toastrConfig, {
             allowHtml: true,
