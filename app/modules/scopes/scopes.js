@@ -2,15 +2,21 @@
     "use strict";
 
     angular.module('app.scopes')
+        .config(['initializeProvider', config])
         .controller('Scopes', Scopes)
         .controller('Popup', Popup)
-        .factory('ScopesService', ScopesService);
+        .factory('ScopesService', ScopesService)
+        .provider('initialize', initialize);
 
-    Scopes.$inject = ['$modal'];
+    Scopes.$inject = ['$modal', 'initialize'];
     Popup.$inject = ['$modalInstance', 'scopesModelData', 'ScopesService'];
 
 
-    function Scopes($modal) {
+    function config(initializeProvider) {
+        initializeProvider.text = "Yo!";
+    }
+
+    function Scopes($modal, initialize) {
         var vm = this,
             modalInstance;
 
@@ -19,6 +25,8 @@
             firstName: 'Edgar',
             lastName: 'Wilson'
         };
+
+        console.log('prov', initialize.hello());
 
         vm.showPopup = function () {
             modalInstance = $modal.open({
@@ -79,6 +87,19 @@
                 setFormDataProperty(key, val);
             });
         }
+    }
+
+    function initialize() {
+        var self = this;
+        self.text = "Hello world";
+
+        this.$get = function () {
+            return {
+                hello: function () {
+                    return self.text;
+                }
+            }
+        };
     }
 
 })();
