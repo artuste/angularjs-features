@@ -16,6 +16,8 @@
         initializeProvider.text = "Yo!";
     }
 
+
+
     function Scopes($modal, initialize) {
         var vm = this,
             modalInstance;

@@ -125,5 +125,6 @@ module.exports = function (grunt) {
     // My tasks
     grunt.registerTask('hints', ['jshint', 'htmlhint']);
     grunt.registerTask('less-css', ['less', 'cssmin']);
+    grunt.registerTask('tests', ['karma']);
     grunt.registerTask('default', ['connect']);
 };
