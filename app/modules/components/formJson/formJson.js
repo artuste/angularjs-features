@@ -18,7 +18,7 @@
 
     function formTemplateDataCtrl($scope, $http) {
         $scope.getJson = function () {
-            return $http.get($scope.url);
+            r   eturn $http.get($scope.url);
         };
     }
 
