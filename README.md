@@ -1,24 +1,30 @@
-<h1>Base AngularJS Application</h1>
+# Base AngularJS Application
+It's SPA Application (AngularJS). This application show how to use some of the AngularJS features in action. Probably it's a right place if you want to see the possibilities which give AngularJS.
 
-<p>In command-line go to the project folder.</p>
+## Features
+* Animations
+* Growl Messages (toastr)
+* Custom forms (using JSON config/scheme)
+* Lazy-loading the modules (ocLazyLoad)
+* Interpolation (examples)
+* JS Patterns (examples)
+* Promises/callbacks (examples)
+* Scopes (examples)
+* AngularJS Watcher Component (will show you how many watchers is on)
+* Directives (examples)
 
-<h3>Install npm</h3>
+## Running the application
 <pre>npm install</pre>
-
-<h3>Install bower</h3>
-<p>Because Bower is using Git repository, run it in Git bash command-line.</p>
 <pre>bower install</pre>
-
-<h3>Run default Grunt task</h3>
 <pre>grunt</pre>
 
-<h3>E2E Tests</h3>
-<h4>Setup</h4>
+## E2E Tests
+### Setup
 <pre>npm install -g protractor</pre>
 <pre>webdriver-manager update</pre>
 <pre>webdriver-manager start</pre>
 
-<h4>Configuration</h4>
+### Configuration
 <b>protractor.conf.js</b>
 <pre>
 exports.config = {
@@ -42,5 +48,5 @@ exports.config = {
 };
 </pre>
 
-<h4>Run tests</h4>
+### Run tests
 <pre>protractor protractor.conf.js</pre>
