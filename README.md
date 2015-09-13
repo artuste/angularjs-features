@@ -12,6 +12,7 @@ It's SPA Application (AngularJS). This application show how to use some of the A
 * Scopes (examples)
 * AngularJS Watcher Component (will show you how many watchers is on)
 * Directives (examples)
+* E2E (end-to-end tests using Protractor)
 
 ## Running the application
 <pre>npm install</pre>
