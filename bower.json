@@ -1,7 +1,7 @@
 {
-  "name": "Stipter App",
+  "name": "BajsApp",
   "version": "0.1.0",
-  "description": "Stipter Admin panel",
+  "description": "Base SPA application",
   "moduleType": [
     "globals",
     "node"
