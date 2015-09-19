@@ -4,7 +4,7 @@ node_js:
 - '0.12'
 
 before_install:
-- npm install --quiet -g grunt
+- npm install --quiet -g bower grunt
 - bower install
 
 
