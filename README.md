@@ -1,5 +1,5 @@
-# Base AngularJS Application
-It's SPA Application (AngularJS). This application show how to use some of the AngularJS features in action.<br /> Probably it's a right place if you want to see the possibilities which give AngularJS.
+# AngularJS SPA Features
+It's SPA based on AngularJS. This application show how to use some of the AngularJS features in action.<br /> Probably it's a right place if you want to see the possibilities which give AngularJS.
 
 ## Features
 * Animations
