@@ -1,5 +1,5 @@
 # AngularJS Features
-It's SPA based on AngularJS. This application show how to use some of the AngularJS features in action.<br /> Probably it's a right place if you want to see the possibilities which give AngularJS.
+It's SPA based on AngularJS 1.3.15. This application show how to use some of the AngularJS features in action.<br /> Probably it's a right place if you want to see the possibilities which give AngularJS.
 
 ## Features
 * Animations
@@ -16,7 +16,6 @@ It's SPA based on AngularJS. This application show how to use some of the Angula
 
 ## Running the application
 <pre>npm install</pre>
-<pre>bower install</pre>
 <pre>grunt</pre>
 
 ## E2E Tests
