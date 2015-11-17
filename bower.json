@@ -49,6 +49,7 @@
     "jquery-ui": "~1.11.0",
     "oclazyload": "~0.5.2",
     "respond": "~1.4.2",
+    "rx-angular": "angular-rx#~1.0.4",
     "rxjs": "~4.0.7"
   }
 }
