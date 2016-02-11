@@ -7,18 +7,18 @@
 
     function config($stateProvider) {
         $stateProvider
-            .state('reactive', {
-                url: '/reactive',
-                templateUrl: 'app/modules/reactive/reactive.tpl.html',
-                controller: 'Reactive',
+            .state('lazyLoad', {
+                url: '/lazyLoad',
+                templateUrl: 'app/modules/lazyLoad/lazyLoad.tpl.html',
+                controller: 'LazyLoad',
                 controllerAs: 'vm',
                 resolve: {
                     loadModule: ['$ocLazyLoad', function ($ocLazyLoad) {
                         return $ocLazyLoad.load({
-                            name: 'app.reactive',
+                            name: 'app.lazyLoad',
                             files: [
-                                'app/modules/reactive/reactive.module.js',
-                                'app/modules/reactive/reactive.js'
+                                'app/modules/lazyLoad/lazyLoad.module.js',
+                                'app/modules/lazyLoad/lazyLoad.js'
                             ]
                         });
                     }]
