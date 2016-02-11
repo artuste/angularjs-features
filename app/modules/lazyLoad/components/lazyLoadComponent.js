@@ -15,16 +15,15 @@
             link: function (scope, element, attr) {
                 scope.data = [];
 
-                getData(0,20);
+                getData(0, 20);
                 scrollBottom(function () {
-                    getData(21,40);
-                    console.log('bottom');
+                    getData(21, 40);
                 });
 
                 function getData(offsetStart, offsetEnd) {
                     DataService.get(offsetStart, offsetEnd)
                         .then(function (response) {
-                            scope.data.push(response.data);
+                            appendData(response);
                         });
                 }
 
@@ -34,6 +33,10 @@
                             fnc();
                         }
                     });
+                }
+
+                function appendData(response) {
+                    Array.prototype.push.apply(scope.data, response.data)
                 }
             }
         };
