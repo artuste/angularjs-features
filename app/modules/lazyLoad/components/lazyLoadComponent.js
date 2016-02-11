@@ -4,24 +4,33 @@
     angular.module('app.lazyLoad')
         .directive('lazyLoadComponent', lazyLoadComponent);
 
-    function lazyLoadComponent() {
+    lazyLoadComponent.$inject = ['DataService'];
+
+    function lazyLoadComponent(DataService) {
         return {
             restrict: 'EA',
             templateUrl: 'app/modules/lazyLoad/components/lazyLoadComponent.tpl.html',
-            scope: {
-              data: '='
+            controller: function ($scope) {
             },
-            controller: function($scope) {
-                $scope.test = 'Lazy!!!';
-            },
-            link: function(scope, element, attr) {
+            link: function (scope, element, attr) {
+                scope.data = [];
+
+                getData(0,20);
                 scrollBottom(function () {
-                    alert("bottom!");
+                    getData(21,40);
+                    console.log('bottom');
                 });
 
+                function getData(offsetStart, offsetEnd) {
+                    DataService.get(offsetStart, offsetEnd)
+                        .then(function (response) {
+                            scope.data.push(response.data);
+                        });
+                }
+
                 function scrollBottom(fnc) {
-                    $(window).scroll(function() {
-                        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    $(window).scroll(function () {
+                        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
                             fnc();
                         }
                     });

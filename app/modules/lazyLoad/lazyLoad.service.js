@@ -8,8 +8,8 @@
 
     function DataService($http) {
         return {
-            get: function () {
-                return $http.get('app/modules/lazyLoad/data.json');
+            get: function (offsetStart, offsetEnd) {
+                return $http.get('app/modules/lazyLoad/data.json?offsetStart=' + offsetStart + '&offsetEnd=' + offsetEnd);
             }
         }
     }

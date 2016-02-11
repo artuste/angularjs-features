@@ -4,15 +4,15 @@
     angular.module('app.lazyLoad')
         .controller('LazyLoad', LazyLoad);
 
-    LazyLoad.$inject = ['DataService'];
+    //LazyLoad.$inject = ['DataService'];
 
-    function LazyLoad(DataService) {
+    function LazyLoad() {
         var vm = this;
 
-        DataService.get()
-            .then(function (response) {
-                vm.data = response.data;
-            });
+        //DataService.get()
+        //    .then(function (response) {
+        //        vm.data = response.data;
+        //    });
     }
 
 })();
