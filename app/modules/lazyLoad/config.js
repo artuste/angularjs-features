@@ -18,7 +18,9 @@
                             name: 'app.lazyLoad',
                             files: [
                                 'app/modules/lazyLoad/lazyLoad.module.js',
-                                'app/modules/lazyLoad/lazyLoad.js'
+                                'app/modules/lazyLoad/lazyLoad.js',
+                                'app/modules/lazyLoad/lazyLoad.service.js',
+                                'app/modules/lazyLoad/components/lazyLoadComponent.js'
                             ]
                         });
                     }]
