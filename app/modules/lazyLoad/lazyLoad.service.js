@@ -2,11 +2,11 @@
     'use strict';
 
     angular.module('app.lazyLoad')
-        .factory('DataService', DataService);
+        .factory('LazyLoadService', LazyLoadService);
 
-    DataService.$inject = ['$http'];
+    LazyLoadService.$inject = ['$http'];
 
-    function DataService($http) {
+    function LazyLoadService($http) {
         return {
             get: function (offsetStart, offsetEnd) {
                 return $http.get('app/modules/lazyLoad/data.json?offsetStart=' + offsetStart + '&offsetEnd=' + offsetEnd);

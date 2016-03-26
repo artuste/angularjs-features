@@ -24,6 +24,7 @@
                     DataService.get(offsetStart, offsetEnd)
                         .then(function (response) {
                             appendData(response);
+                            console.log('ok');
                         });
                 }
 

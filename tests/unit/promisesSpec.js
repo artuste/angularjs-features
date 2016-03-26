@@ -3,13 +3,13 @@ describe('Promises', function() {
         $rootScope,
         $httpBackend,
         Promises,
-        DataService;
+        PromisesDataService;
 
     beforeEach(module('app.promises'));
-    beforeEach(inject(function($controller, _$rootScope_, $q, _DataService_, _$httpBackend_) {
+    beforeEach(inject(function($controller, _$rootScope_, $q, _PromisesDataService_, _$httpBackend_) {
         $rootScope = _$rootScope_;
         $httpBackend = _$httpBackend_;
-        DataService = _DataService_;
+        PromisesDataService = _PromisesDataService_;
         Promises = $controller('Promises', {});
 
         $httpBackend.when("GET", "app/modules/promises/data.json").respond({});
@@ -19,7 +19,7 @@ describe('Promises', function() {
             code: 101
         });
 
-        spyOn(DataService, 'getHttpData').and.returnValue(deferred.promise);
+        spyOn(PromisesDataService, 'getHttpData').and.returnValue(deferred.promise);
     }));
 
     it('should promises to be defined', function () {
@@ -33,7 +33,7 @@ describe('Promises', function() {
 
     it('should getHttpData', function () {
         var result;
-        DataService.getHttpData()
+        PromisesDataService.getHttpData()
             .then(function (response) {
                 result = response;
             });

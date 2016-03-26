@@ -3,7 +3,7 @@ describe('App/basic E2E Tests', function() {
 
     it('should have a title', function() {
         browser.get(baseUrl);
-        expect(browser.getTitle()).toEqual('Bajsapp');
+        expect(browser.getTitle()).toEqual('AngularJS Features');
     });
 
     describe('home', function() {

@@ -4,9 +4,9 @@
     angular
         .module('app.promises')
         .controller('Promises', Promises)
-        .factory('DataService', DataService);
+        .factory('PromisesDataService', PromisesDataService);
 
-    Promises.$inject = ['DataService'];
+    Promises.$inject = ['PromisesDataService'];
 
     function Promises(DataService) {
         /*jshint validthis: true */
@@ -30,7 +30,7 @@
 
     }
 
-    function DataService($http, $q, $timeout) {
+    function PromisesDataService($http, $q, $timeout) {
         return {
             getTimeoutData: getTimeoutData,
             getHttpData: getHttpData,
